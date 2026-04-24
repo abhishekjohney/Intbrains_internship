@@ -1,0 +1,58 @@
+============================================================
+LOCAL SYSTEM HEALTH REPORT
+============================================================
+Generated: 2026-04-23 17:51:24
+
+System Overview
+  Hostname: OrBI
+  FQDN: OrBI
+  User: abhis
+  OS: Windows 11
+  Version: 10.0.26200
+  Architecture: AMD64
+  Processor: Intel64 Family 6 Model 186 Stepping 2, GenuineIntel
+  Boot Time: 2026-04-22 15:38:46
+  Uptime: 1 day, 2:12:37
+  Running Processes: 396
+
+CPU Status
+  Physical Cores: 12
+  Logical Cores: 16
+  Current Usage: 3.5%
+  Current Frequency: 2600.00 MHz
+  Min Frequency: 0.00 MHz
+  Max Frequency: 2600.00 MHz
+
+Summary
+  Overall Status: Attention needed
+  Key Risks: storage at 91.4%
+  Uptime: 1 day, 2:12:37
+  Active Processes: 396
+
+RAM/Memory Status
+  Total: 13.75 GB
+  Available: 4.19 GB
+  Used: 9.56 GB
+  Usage: 69.5%
+  Swap Total: 9.51 GB
+  Swap Used: 1.21 GB
+  Swap Usage: 12.8%
+
+Storage Status
+  Drive: C:\
+  Total: 218.72 GB
+  Used: 199.85 GB
+  Free: 18.86 GB
+  Usage: 91.4%
+
+Network Status
+  Bytes Sent: 90.38 MB
+  Bytes Received: 1.21 GB
+  Packets Sent: 221021
+  Packets Received: 287688
+
+AI-style Observations
+  - Memory usage is normal at 69.5%.
+  - Storage usage is critical at 91.4% on C:\.
+  - CPU usage is normal at 3.5%.
+============================================================
