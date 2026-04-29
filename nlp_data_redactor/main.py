@@ -109,7 +109,6 @@ def main():
             print("------------------------------------------------------------\n")
             continue
             
-        # --- PHASE 2: PII DETECTED ---
         print("============================================================")
         print("2. PII DETECTED IN PAYLOAD")
         print("============================================================")
@@ -117,7 +116,6 @@ def main():
             print(f" -> Found: '{item['value']}' (Identified as: {item['type']})")
         print()
             
-        # --- PHASE 3: SANITIZED DOCUMENT ---
         print("============================================================")
         print("3. SAFE TEXT (REDACTED DOCUMENT)")
         print("============================================================")
