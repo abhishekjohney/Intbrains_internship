@@ -1,0 +1,11 @@
+Disease Name: COVID-19
+
+Symptoms:
+- Loss of taste or smell
+- Shortness of breath or difficulty breathing
+- Fever or chills
+- Persistent dry cough
+- New confusion
+- Severe fatigue
+
+Description: A highly contagious respiratory illness caused by the SARS-CoV-2 virus. It can range from mild respiratory symptoms to severe illness and often features unique neurological symptoms like loss of taste.

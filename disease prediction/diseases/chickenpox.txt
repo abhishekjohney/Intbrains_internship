@@ -1,0 +1,10 @@
+Disease Name: Chickenpox (Varicella)
+
+Symptoms:
+- An itchy, blister-like rash all over the body
+- Fever
+- Fatigue and a general feeling of being unwell (malaise)
+- Loss of appetite
+- Headache
+
+Description: A highly contagious viral infection causing an itchy, blister-like rash on the skin. It is most common in children but can affect adults who haven't had it or haven't been vaccinated.

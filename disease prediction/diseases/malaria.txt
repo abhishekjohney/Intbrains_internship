@@ -1,0 +1,11 @@
+Disease Name: Malaria
+
+Symptoms:
+- High fever
+- Shaking chills that can range from moderate to severe
+- Profuse sweating
+- Headache and muscle aches
+- Nausea and vomiting
+- Anemia and jaundice (yellowing of the skin and eyes)
+
+Description: A serious and sometimes fatal disease caused by a parasite that commonly infects a certain type of mosquito which feeds on humans. It is prevalent in tropical and subtropical regions.

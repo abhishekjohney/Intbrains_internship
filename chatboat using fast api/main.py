@@ -14,9 +14,8 @@ import pandas as pd
 
 app = FastAPI(title="Local RAG: Docker & Universal Enterprise Engine")
 
-# ==========================================
 # 1. VECTOR DATABASE SETUP (Docker)
-# ==========================================
+
 print("Connecting to Qdrant Docker Server...")
 # Connects to the Qdrant instance running in your Docker container
 qdrant = QdrantClient(url="http://localhost:6333") 
@@ -30,9 +29,7 @@ except Exception:
         vectors_config=VectorParams(size=768, distance=Distance.COSINE),
     )
 
-# ==========================================
 # 2. UNIVERSAL TEXT EXTRACTOR
-# ==========================================
 def extract_text_from_file(file_path: str) -> str:
     """Reads a file path and extracts raw text based on its extension."""
     ext = os.path.splitext(file_path)[1].lower()
@@ -73,18 +70,14 @@ def extract_text_from_file(file_path: str) -> str:
 
     return text
 
-# ==========================================
 # 3. PYDANTIC SHIELDS
-# ==========================================
 class FilePathPayload(BaseModel):
     file_path: str
 
 class ChatPayload(BaseModel):
     question: str
 
-# ==========================================
 # 4. ROUTE: INGEST ANY FILE
-# ==========================================
 @app.post("/api/learn-from-path")
 def learn_from_local_path(payload: FilePathPayload):
     if not os.path.exists(payload.file_path):
@@ -131,9 +124,7 @@ def learn_from_local_path(payload: FilePathPayload):
         "chunks_memorized": saved_chunks
     }
 
-# ==========================================
 # 5. ROUTE: CHAT WITH THE DATA
-# ==========================================
 @app.post("/api/chat")
 def ask_ai(payload: ChatPayload):
     # 1. Convert question to vector

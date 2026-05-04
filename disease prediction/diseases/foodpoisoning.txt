@@ -1,0 +1,10 @@
+Disease Name: Food Poisoning (Gastroenteritis)
+
+Symptoms:
+- Nausea and vomiting
+- Watery or bloody diarrhea
+- Abdominal pain and stomach cramps
+- Low-grade fever
+- General weakness
+
+Description: An illness caused by eating contaminated, spoiled, or toxic food. Symptoms typically begin within a few hours of eating the contaminated food and are localized to the digestive tract.

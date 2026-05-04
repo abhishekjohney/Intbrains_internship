@@ -1,0 +1,10 @@
+Disease Name: Migraine
+
+Symptoms:
+- Severe throbbing pain or pulsing sensation, usually on one side of the head
+- Extreme sensitivity to light, sound, and sometimes smell
+- Nausea and vomiting
+- Visual auras (seeing flashes of light or blind spots)
+- Dizziness or blurred vision
+
+Description: A neurological condition characterized by intense, debilitating headaches, often accompanied by sensory warning signs and extreme physical sensitivity to the environment.

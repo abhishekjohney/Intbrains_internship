@@ -1,0 +1,10 @@
+Disease Name: Hypertension (High Blood Pressure)
+
+Symptoms:
+- Often completely asymptomatic (known as the "silent killer")
+- Severe headaches (in extremely high, dangerous cases)
+- Shortness of breath
+- Nosebleeds
+- Dizziness or blurred vision
+
+Description: A common condition in which the long-term force of the blood against your artery walls is high enough that it may eventually cause health problems, such as heart disease.

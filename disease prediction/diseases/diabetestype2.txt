@@ -1,0 +1,12 @@
+Disease Name: Type 2 Diabetes
+
+Symptoms:
+- Increased thirst and dry mouth
+- Frequent urination
+- Increased hunger
+- Unintended weight loss
+- Fatigue
+- Blurred vision
+- Slow-healing sores or frequent infections
+
+Description: A chronic condition that affects the way your body processes blood sugar (glucose). Your body either doesn't produce enough insulin, or it resists insulin.

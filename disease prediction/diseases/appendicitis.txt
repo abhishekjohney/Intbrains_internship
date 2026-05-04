@@ -1,0 +1,11 @@
+Disease Name: Appendicitis
+
+Symptoms:
+- Sudden pain that begins on the right side of the lower abdomen
+- Sudden pain that begins around your navel and often shifts to your lower right abdomen
+- Pain that worsens if you cough, walk, or make other jarring movements
+- Nausea and vomiting
+- Loss of appetite
+- Low-grade fever that may worsen as the illness progresses
+
+Description: An inflammation of the appendix, a finger-shaped pouch that projects from your colon on the lower right side of your abdomen. It is a medical emergency that requires prompt surgery.

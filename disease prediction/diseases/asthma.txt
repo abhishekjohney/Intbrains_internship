@@ -1,0 +1,10 @@
+Disease Name: Asthma
+
+Symptoms:
+- Shortness of breath
+- Chest tightness or pain
+- Wheezing when exhaling
+- Trouble sleeping caused by shortness of breath or coughing
+- Coughing or wheezing attacks worsened by a respiratory virus
+
+Description: A chronic condition in which your airways narrow and swell, and may produce extra mucus. This can make breathing difficult and trigger coughing and a whistling sound (wheezing) when you breathe out.

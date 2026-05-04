@@ -1,0 +1,11 @@
+Disease Name: Influenza (The Flu)
+
+Symptoms:
+- Sudden high fever
+- Severe muscle aches and joint pain
+- Chills and sweats
+- Dry, persistent cough
+- Fatigue and weakness
+- Nasal congestion
+
+Description: A viral infection that attacks your respiratory system. It typically comes on very suddenly compared to a common cold.

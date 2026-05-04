@@ -1,0 +1,11 @@
+Disease Name: Gastroesophageal Reflux Disease (GERD)
+
+Symptoms:
+- Heartburn (a burning sensation in your chest, usually after eating)
+- Regurgitation of food or sour liquid (acid reflux)
+- Upper abdominal or chest pain
+- Difficulty swallowing (dysphagia)
+- Sensation of a lump in your throat
+- Chronic cough or laryngitis
+
+Description: A digestive disorder that occurs when stomach acid or bile flows back into your food pipe (esophagus). The constant backwash of acid irritates the lining of your esophagus.
