@@ -1,8 +1,7 @@
 import os
 
-# Fix Windows terminal encoding — prevents UnicodeEncodeError on progress bars
 os.environ['PYTHONIOENCODING'] = 'utf-8'
-os.environ['CUDA_VISIBLE_DEVICES'] = '-1'  # Force CPU-only mode
+os.environ['CUDA_VISIBLE_DEVICES'] = '-1' 
 
 from fastapi import FastAPI, HTTPException
 from pydantic import BaseModel
@@ -34,10 +33,8 @@ except Exception as e:
     print(f"Warning: Docling not available: {e}")
     docling_available = False
 
-# ── FastAPI app ───────────────────────────────────────────────────────────────
 app = FastAPI(title="Multimodal RAG Assistant — Powered by Docling")
 
-# ── Qdrant vector database ────────────────────────────────────────────────────
 print("Connecting to Qdrant Vector Database...")
 qdrant = QdrantClient(url="http://localhost:6333")
 COLLECTION_NAME = "multimodal_brain"
@@ -57,16 +54,11 @@ except Exception:
         print(f"Error creating collection: {create_err}")
 
 # ── Load Faster-Whisper model ────────────────────────────────────────────────
-# Model options (accuracy vs speed tradeoff on CPU):
-#   tiny   ~39M  — fastest, lower accuracy
-#   base   ~74M  — previous setting
-#   small  ~244M — recommended: best accuracy/speed balance (default)
-#   medium ~769M — very accurate, slower (~3-4 min per audio on CPU)
+
 WHISPER_MODEL_SIZE = "small"  # ← change this to tune accuracy vs speed
 print(f"Loading faster-whisper ({WHISPER_MODEL_SIZE} model)...")
 if whisper_available:
     try:
-        # compute_type="int8" quantizes weights → 3-4x faster on CPU, same accuracy
         whisper_model = WhisperModel(WHISPER_MODEL_SIZE, device="cpu", compute_type="int8")
         print(f"[OK] faster-whisper ({WHISPER_MODEL_SIZE}) loaded successfully")
     except Exception as e:
@@ -75,7 +67,6 @@ if whisper_available:
 else:
     print("[FAIL] faster-whisper not available")
 
-# ── Load Docling converter ────────────────────────────────────────────────────
 print("Loading Docling DocumentConverter...")
 if docling_available:
     try:
@@ -87,13 +78,11 @@ if docling_available:
 else:
     print("[FAIL] Docling not available")
 
-# ── Supported file types ──────────────────────────────────────────────────────
 IMAGE_EXTS   = {'jpg', 'jpeg', 'png', 'bmp', 'tiff', 'webp', 'gif'}
 AUDIO_EXTS   = {'mp3', 'wav', 'm4a'}
 DOCLING_EXTS = {'pdf', 'docx', 'pptx', 'xlsx', 'xls', 'csv', 'html', 'txt'} | IMAGE_EXTS
 
 
-# ── Request schemas ───────────────────────────────────────────────────────────
 class FilePayload(BaseModel):
     file_path: str
 
@@ -104,9 +93,6 @@ class AudioQuestionPayload(BaseModel):
     audio_file_path: str
 
 
-# ─────────────────────────────────────────────────────────────────────────────
-# TEXT EXTRACTION
-# ─────────────────────────────────────────────────────────────────────────────
 
 def extract_with_docling(file_path: str) -> str:
     """
@@ -177,7 +163,6 @@ def extract_text(file_path: str) -> str:
         print(f"[Whisper] Transcribed {len(text)} chars | detected lang: {info.language} ({info.language_probability:.0%})")
         return text
 
-    # ── All documents and images: try Docling first ───────────────────────────
     if ext in DOCLING_EXTS:
         try:
             docling_text = extract_with_docling(file_path)
@@ -200,9 +185,7 @@ def extract_text(file_path: str) -> str:
     raise ValueError(f"Unsupported file type: .{ext}")
 
 
-# ─────────────────────────────────────────────────────────────────────────────
-# CHUNKING
-# ─────────────────────────────────────────────────────────────────────────────
+#chunking─
 
 def chunk_text(text: str, chunk_size: int = 2000, overlap: int = 200):
     """
@@ -224,9 +207,7 @@ def chunk_text(text: str, chunk_size: int = 2000, overlap: int = 200):
         start = end - overlap
 
 
-# ─────────────────────────────────────────────────────────────────────────────
-# SHARED RAG HELPER — embed question + search + generate answer
-# ─────────────────────────────────────────────────────────────────────────────
+
 
 def rag_answer(question: str) -> str:
     """Embed question → search Qdrant → build context → Llama 3 answer."""
@@ -264,9 +245,6 @@ User Question: {question}"""
     return llm_response["response"]
 
 
-# ─────────────────────────────────────────────────────────────────────────────
-# API ROUTES
-# ─────────────────────────────────────────────────────────────────────────────
 
 @app.post("/api/learn")
 def learn_document(payload: FilePayload):

@@ -1,0 +1,3 @@
+@echo off
+echo Starting Coding Agent UI...
+uvicorn main:app --reload --host 127.0.0.1 --port 8000
